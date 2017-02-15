@@ -12,22 +12,22 @@
 ```objective-c
 /**********一、初始化CollectinView**********/
 - (void)initCollectionView {
-_margin = 5;
-_itemWH = (SCREEN_WIDTH - 12*2 - 5*3)/4;
-UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-layout.itemSize = CGSizeMake(_itemWH, _itemWH);
-layout.minimumInteritemSpacing = 0;
-layout.minimumLineSpacing = _margin;
-_collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(12, 10, SCREEN_WIDTH - 24, 300) collectionViewLayout:layout];
-_collectionView.alwaysBounceVertical = YES;
-_collectionView.scrollEnabled = NO;
-_collectionView.backgroundColor = [UIColor whiteColor];
-_collectionView.dataSource = self;
-_collectionView.delegate = self;
-_collectionView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
-[self.view addSubview:_collectionView];
+   _margin = 5;
+   _itemWH = (SCREEN_WIDTH - 12*2 - 5*3)/4;
+   UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+   layout.itemSize = CGSizeMake(_itemWH, _itemWH);
+   layout.minimumInteritemSpacing = 0;
+   layout.minimumLineSpacing = _margin;
+   _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(12, 10, SCREEN_WIDTH - 24, 300) collectionViewLayout:layout];
+   _collectionView.alwaysBounceVertical = YES;
+   _collectionView.scrollEnabled = NO;
+   _collectionView.backgroundColor = [UIColor whiteColor];
+   _collectionView.dataSource = self;
+   _collectionView.delegate = self;
+   _collectionView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+   [self.view addSubview:_collectionView];
 
-[_collectionView registerClass:[CollectionCell class] forCellWithReuseIdentifier:@"CollectionCell"];
+   [_collectionView registerClass:[CollectionCell class] forCellWithReuseIdentifier:@"CollectionCell"];
 }
 
 /**********二、处理CollectinView代理、数据源及图片点击事件**********/
