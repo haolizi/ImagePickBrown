@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A3CF6D7750245B74B27B406DEE780AB81E8E0279",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A3CF6D7750245B74B27B406DEE780AB81E8E0279" : 9223372036854775807,
+    "E3AFB954F0BB4A971F5349B89BC771038BA863ED" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9B5EFF23-541A-477B-966B-F5BB4E8F8D54",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A3CF6D7750245B74B27B406DEE780AB81E8E0279" : "ImageBrown\/",
+    "E3AFB954F0BB4A971F5349B89BC771038BA863ED" : "ImageBrown\/ImageBrown\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ImageBrown",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ImageBrown.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/haolizi\/ImagePickBrown.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A3CF6D7750245B74B27B406DEE780AB81E8E0279"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/haolizi\/ImageBrown.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E3AFB954F0BB4A971F5349B89BC771038BA863ED"
+    }
+  ]
+}
