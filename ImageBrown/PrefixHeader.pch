@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  Post
+//
+//  Created by chuang Hao on 2017/2/15.
+//  Copyright © 2017年 Mr.Hao. All rights reserved.
+//
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define RGB_COLOR(R, G, B, A) [UIColor colorWithRed:((R)/255.0f) green:((G)/255.0f) blue:((B)/255.0f) alpha:A]
+
+#endif /* PrefixHeader_pch */
