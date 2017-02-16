@@ -1,8 +1,6 @@
 # ImageBrown
 
 图片选择器，浏览图片支持网络图片与本地图片共存
-效果图：
-![image](https://github.com/haolizi/ImagePickBrown/blob/master/etc.gif)
 
 ## 前言
 
@@ -11,6 +9,8 @@
 <br>这两个demo的具体用法和详细介绍，还请大家自己前去查看，这里就不一一讲解了，另TZImagePickerController支持选择原图和本地视频，这里给屏蔽掉了，你可根据自己项目需求自己进行修改。</br>
 <br>本人才疏学浅，本demo只是简单展示，望能者勿喷。</br>
 
+效果图：
+![image](https://github.com/haolizi/ImagePickBrown/blob/master/etc.gif)
 
 一、初始化CollectinView
 ```objective-C
