@@ -1,13 +1,14 @@
 # ImageBrown
 
 图片选择器，浏览图片支持网络图片与本地图片共存
+效果图：
 
 ## 前言
 
 
-首先我要声明的是：这个demo是本人把[TZImagePickerController](https://github.com/banchichen/TZImagePickerController)（选择本地图片）与 [XLPhotoBrowser](http://www.jianshu.com/p/7ddeb1521d44)（图片浏览）这两个强大的神器简单修改、结合而成，感谢两位大神的无私贡献。
-<br>这两个demo的具体用法和详细介绍，还请大家自己前去查看，这里就不一一讲解了，另TZImagePickerController支持选择原图和本地视频，这里给屏蔽掉了，你可根据自己项目需求自己进行修改。/<br>
-<br>本人才疏学浅，本demo只是简单展示，望能者勿喷。/<br>
+首先我要声明的是：这个demo是本人把[TZImagePickerController](https://github.com/banchichen/TZImagePickerController)（选择本地图片）与 [XLPhotoBrowser](https://github.com/Shannoon/XLPhotoBrowser)（图片浏览）这两个强大的神器简单修改、结合而成，感谢两位大神的无私贡献。
+<br>这两个demo的具体用法和详细介绍，还请大家自己前去查看，这里就不一一讲解了，另TZImagePickerController支持选择原图和本地视频，这里给屏蔽掉了，你可根据自己项目需求自己进行修改。</br>
+<br>本人才疏学浅，本demo只是简单展示，望能者勿喷。</br>
 
 
 一、初始化CollectinView
@@ -120,8 +121,49 @@
 
 三、删除图片
 ```objective-C
+//删除按钮点击事件
+- (void)deleteBtnAction:(UIButton *)button {
+    //有网络图片时
+    if (_netImageUrlArray.count > 0) {
+        //删除的是网络图片
+        if (button.tag <= _netImageUrlArray.count - 1) {
+            [_netImageUrlArray removeObjectAtIndex:button.tag];
+        }
+        //删除的是本地图片
+        else {
+            [_selectedPhotos removeObjectAtIndex:button.tag - _netImageUrlArray.count];
+            [_selectedAssets removeObjectAtIndex:button.tag - _netImageUrlArray.count];
+        }
+    }
+    //没有网络图片，删除的任何一个都是本地图片
+    else {
+        [_selectedPhotos removeObjectAtIndex:button.tag];
+        [_selectedAssets removeObjectAtIndex:button.tag];
+    }
+    //如果删除的是封面图片，第一张图片变为封面
+    if (button.tag == coverIndex) {
+        coverIndex = 0;
+    }
+    else {
+        if (button.tag < coverIndex) {
+            -- coverIndex;
+        }
+    }
+    [_selectedAllPhotos removeAllObjects];
+    [_selectedAllPhotos addObjectsFromArray:_netImageUrlArray];
+    [_selectedAllPhotos addObjectsFromArray:_selectedPhotos];
+    [_collectionView reloadData];
+}
 
 ```
-效果图：
+
+四、用作封面代理回调，刷新CollectionView
+```objective-C
+- (void)UsageCoverWithCurrentImageIndex:(NSInteger)currentImageIndex{
+    coverIndex = (int)currentImageIndex;
+    [_collectionView reloadData];
+}
+```
+
 
 
