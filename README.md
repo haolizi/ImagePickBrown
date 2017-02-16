@@ -2,6 +2,7 @@
 
 图片选择器，浏览图片支持网络图片与本地图片共存
 效果图：
+![image](https://github.com/haolizi/ImagePickBrown/blob/master/etc.gif)
 
 ## 前言
 
