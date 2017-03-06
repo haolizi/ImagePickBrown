@@ -6,12 +6,12 @@
 
 
 首先我要声明的是：这个demo是本人把[TZImagePickerController](https://github.com/banchichen/TZImagePickerController)（选择本地图片）与 [XLPhotoBrowser](https://github.com/Shannoon/XLPhotoBrowser)（图片浏览）这两个强大的神器简单修改、结合而成，感谢两位大神的无私贡献。
-<br>这两个demo的具体用法和详细介绍，还请大家自己前去查看，这里就不一一讲解了，另TZImagePickerController支持选择原图和本地视频，这里给屏蔽掉了，你可根据自己项目需求自己进行修改。</br>
+<br>这两个demo的具体用法和详细介绍，还请大家自己前去查看，这里就不一一讲解了，另TZImagePickerController支持选择原图和本地视频，这里给屏蔽掉了，你可根据自己项目需求自己进行修改。XLPhotoBrowser这里也只用到其中的一种浏览方式。</br>
 <br>本人才疏学浅，本demo只是简单展示，望能者勿喷。</br>
-
+<br>下面列出主要代码，欢迎下载、欢迎指导、欢迎star。</br>
 ![image](https://github.com/haolizi/ImagePickBrown/blob/master/etc.gif)
 
-一、初始化CollectinView
+一、初始化CollectionView
 ```objective-C
 - (void)initCollectionView {
     _margin = 5;
